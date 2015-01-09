@@ -56,7 +56,7 @@ HWViewPagerDelegate
 
 #Example
 
-- ##Full in Layout
+## Part of Side Preview || Full
 
 <p align="center" >
   <img src="https://scontent-a-sea.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10416572_828591647201189_6558629512005493172_n.jpg?oh=f9ef7535f4b82879032342ebb964d5c9&oe=552F2DCE">
@@ -64,7 +64,7 @@ HWViewPagerDelegate
 
 
 
-- ##Auto Fit - Orientation Rotate
+##Auto Fit - Orientation Rotate
 
 <p align="center" >
   <img src="https://scontent-a-sea.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10931157_828591637201190_6402771892877942380_n.jpg?oh=198c8ccf58f865b38d00cb854ef339eb&oe=5527A4CD">
