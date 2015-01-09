@@ -118,6 +118,8 @@ typedef NS_ENUM(NSInteger, PagerControlState) {
         self.beforeFrame = self.frame;
         
         self.itemWidthWithMargin = widthNew + self.flowLayout.minimumLineSpacing;
+        
+        
     }
 }
 

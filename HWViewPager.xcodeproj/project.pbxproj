@@ -18,6 +18,7 @@
 		F557E3761A5F74A0008DD33A /* HWViewPager.m in Sources */ = {isa = PBXBuildFile; fileRef = F557E3751A5F74A0008DD33A /* HWViewPager.m */; };
 		F557E37A1A5F8753008DD33A /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F557E3791A5F8753008DD33A /* image.jpg */; };
 		F557E37D1A5F8DEB008DD33A /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F557E37C1A5F8DEB008DD33A /* TableViewCell.m */; };
+		F57900171A600B2D008FE8C6 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F57900161A600B2D008FE8C6 /* ThirdViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		F557E3791A5F8753008DD33A /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
 		F557E37B1A5F8DEB008DD33A /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		F557E37C1A5F8DEB008DD33A /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		F57900151A600B2D008FE8C6 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		F57900161A600B2D008FE8C6 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 				F557E3521A5F745A008DD33A /* FirstViewController.m */,
 				F557E3541A5F745A008DD33A /* SecondViewController.h */,
 				F557E3551A5F745A008DD33A /* SecondViewController.m */,
+				F57900151A600B2D008FE8C6 /* ThirdViewController.h */,
+				F57900161A600B2D008FE8C6 /* ThirdViewController.m */,
 				F557E37B1A5F8DEB008DD33A /* TableViewCell.h */,
 				F557E37C1A5F8DEB008DD33A /* TableViewCell.m */,
 				F557E3571A5F745A008DD33A /* Main.storyboard */,
@@ -253,6 +258,7 @@
 				F557E3501A5F745A008DD33A /* AppDelegate.m in Sources */,
 				F557E3531A5F745A008DD33A /* FirstViewController.m in Sources */,
 				F557E34D1A5F745A008DD33A /* main.m in Sources */,
+				F57900171A600B2D008FE8C6 /* ThirdViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +449,7 @@
 				F557E36F1A5F745A008DD33A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F557E3701A5F745A008DD33A /* Build configuration list for PBXNativeTarget "HWViewPagerTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +458,7 @@
 				F557E3721A5F745A008DD33A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

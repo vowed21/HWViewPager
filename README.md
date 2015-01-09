@@ -60,7 +60,7 @@ HWViewPagerDelegate
 ## Part of Side Preview || Full
 
 <p align="center" >
-  <img src="https://scontent-a-sea.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10416572_828591647201189_6558629512005493172_n.jpg?oh=f9ef7535f4b82879032342ebb964d5c9&oe=552F2DCE">
+  <img src="https://scontent-b.xx.fbcdn.net/hphotos-xfp1/t31.0-8/10922361_828736803853340_8377129052548269031_o.jpg">
 </p>
 
 
@@ -78,7 +78,7 @@ HWViewPagerDelegate
 - 양 옆이 짤리는 페이저 찾다가, 어떤 뷰든지 범용으로 쓰고 싶어서, 한번 직접 만들어봤습니다.
 - 더 좋은 아이디어가 있으신 분들은 코멘트 많이 부탁드립니다.
 - UICollectionView 를 상속받아서 만들었습니다.
-- 별것 아닌 허잡한 코드지만, 깃허브에 꼭 한번 올려보고 싶었어요. 코멘트 주셔도 감사히 받겠습니다.
+- 별것 아닌 허잡한 코드지만, 깃허브에 꼭 한번 올려보고 싶었어요. 코멘트 주시면 감사히 받겠습니다.
 
 
 

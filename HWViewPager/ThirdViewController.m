@@ -1,29 +1,29 @@
 //
-//  FirstViewController.m
+//  ThirdViewController.m
 //  HWViewPager
 //
 //  Created by HyunWoo Kim on 2015. 1. 9..
 //  Copyright (c) 2015년 HyunWoo Kim. All rights reserved.
 //
 
-#import "FirstViewController.h"
-#import "HWViewPager.h"
+#import "ThirdViewController.h"
 
-@interface FirstViewController () <UICollectionViewDataSource, HWViewPagerDelegate>
+@interface ThirdViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end
 
-@implementation FirstViewController
+@implementation ThirdViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
-
 
 
 
@@ -47,20 +47,19 @@
 
 
 /*
- HWViewPagerDelegate 
+ HWViewPagerDelegate
  connection IBOulet with Storyboard
  
  or
  call method : " [pager setPagerDelegate:id] "
  
-*/
+ */
 
 #pragma mark - HWViewPagerDelegate
 -(void)pagerDidSelectedPage:(NSInteger)selectedPage{
     NSLog(@"FistViewController, SelectedPage : %ld",selectedPage);
-    NSString * string = [NSString stringWithFormat:@"SectionInset left,right = 30, minLinespacing =20\nSelectedPage : %ld",selectedPage];
-    self.label.text = string;                       
+    NSString * string = [NSString stringWithFormat:@"SectionInset left,right = 0, minLinespacing =0\nSelectedPage : %ld",selectedPage];
+    self.label.text = string;
 }
-
 
 @end
