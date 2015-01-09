@@ -12,6 +12,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *label1;
 @property (weak, nonatomic) IBOutlet HWViewPager *pager;
 
-@property int row;
+@property NSInteger row;
 
 @end

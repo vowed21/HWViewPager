@@ -33,7 +33,7 @@
     
     TableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"TableViewCell" forIndexPath:indexPath];
     cell.row = indexPath.row;
-    cell.label1.text = [NSString stringWithFormat:@"CollectionCell count = %d",cell.row+1];
+    cell.label1.text = [NSString stringWithFormat:@"CollectionCell count = %ld",cell.row+1];
     [cell.pager reloadData];
     
     return cell;
