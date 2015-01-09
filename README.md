@@ -9,10 +9,10 @@
 
 
 ## Supported
-- ** Full Screen in "Auto Layout" **
-- ** or Preview Left Right Side partially **
-- ** Auto Fit - Orientation Rotate **
-- ** Page Selected Delegate Protocol Supported **
+- **Full Screen in "Auto Layout"**
+- **or Preview Left Right Side partially**
+- **Auto Fit - Orientation Rotate**
+- **Page Selected Delegate Protocol Supported**
 
 
 
