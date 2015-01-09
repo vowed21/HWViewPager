@@ -5,7 +5,8 @@
 # HWViewPager
 
 - Inherited "UICollectionView"
-- likes Android's ViewPager
+- looks likes Android's ViewPager
+- Preview Left Right Side Partially
 
 
 ## Supported
