@@ -81,6 +81,7 @@ typedef NS_ENUM(NSInteger, PagerControlState) {
     [self setScrollEnabled:YES];
     [self setPagingEnabled:NO];
     
+    self.selectedPageNum = 0;
     self.flowLayout = (UICollectionViewFlowLayout*)self.collectionViewLayout;
     
     //스크롤방향은 horiozontal
@@ -90,8 +91,6 @@ typedef NS_ENUM(NSInteger, PagerControlState) {
     
     self.pagerControlState = PagerControlStateStayCurrent;
     [self setDecelerationRate: UIScrollViewDecelerationRateFast];
-    
-
 }
 
 
@@ -104,13 +103,13 @@ typedef NS_ENUM(NSInteger, PagerControlState) {
 
 
 
+
 #pragma mark - override...
 -(void)layoutSubviews{
     [super layoutSubviews];
     
     //현재 뷰의 프레임 크기와 이전의 프레임과 다르다면, 아이템의 크기도 함께 바꿔준다.
     if(!CGRectEqualToRect(self.frame, self.beforeFrame)){
-
         //flowLayout의 아이템 사이즈를 현재뷰의 width에서 왼쪽인섹션 *2 만큼 빼주고, 셀간여백만큼도 빼준다.
         CGFloat widthNew = self.frame.size.width - (self.flowLayout.sectionInset.left *2) - self.flowLayout.minimumLineSpacing;
         CGFloat heightNew = self.frame.size.height - self.flowLayout.sectionInset.top - self.flowLayout.sectionInset.bottom;
@@ -119,6 +118,9 @@ typedef NS_ENUM(NSInteger, PagerControlState) {
         
         self.itemWidthWithMargin = widthNew + self.flowLayout.minimumLineSpacing;
         
+        //현재 선택된 페이지의 오프셋으로 이동시켜준다.
+        int targetX = [self getOffsetFromPage:self.selectedPageNum scrollView:self];
+        [self setContentOffset:CGPointMake(targetX, 0)];
         
     }
 }
