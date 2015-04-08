@@ -57,8 +57,8 @@
 
 #pragma mark - HWViewPagerDelegate
 -(void)pagerDidSelectedPage:(NSInteger)selectedPage{
-    NSLog(@"FistViewController, SelectedPage : %ld",selectedPage);
-    NSString * string = [NSString stringWithFormat:@"SectionInset left,right = 30\nminLinespacing =20\nSelectedPage : %ld",selectedPage];
+    NSLog(@"FistViewController, SelectedPage : %d",(int)selectedPage);
+    NSString * string = [NSString stringWithFormat:@"SectionInset left,right = 30\nminLinespacing =20\nSelectedPage : %d",(int)selectedPage];
     self.label.text = string;                       
 }
 
