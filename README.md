@@ -24,6 +24,18 @@
 - **Initialize by Storyboard or [initwithFrame: collectionViewLayout:(UICollectionViewFlowLayout*) flowLayout]**
 
 
+## CocoaPods
+```
+platform :ios, '8.0'
+pod 'HWViewPager'
+```
+
+## Programming in Swift?
+#### Visit [HWSwiftyViewPager](https://github.com/vowed21/HWSwiftyViewPager)
+
+
+
+
 ## Usage
 
 #### Full Screen in "Auto Layout"
@@ -35,6 +47,10 @@
 - Configure "SectionInset" Value Left, Right. And minimumLineSpacing
 
 
+#### Set Currnet Page
+```
+-(void) setPage:(NSInteger)page isAnimation:(BOOL)isAnim;
+```
 
 ##Protocol
 
