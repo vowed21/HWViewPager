@@ -15,12 +15,14 @@
 -(void)pagerDidSelectedPage:(NSInteger)selectedPage;
 @end
 
-@interface HWViewPager : UICollectionView
+@interface  HWViewPager : UICollectionView
 
 
 -(void) setPagerDelegate:(id<HWViewPagerDelegate>)pagerDelegate;
 
 -(void) setPage:(NSInteger)page isAnimation:(BOOL)isAnim;
+
+
 
 @end
 

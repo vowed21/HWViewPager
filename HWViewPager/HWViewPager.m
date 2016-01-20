@@ -87,7 +87,7 @@ typedef NS_ENUM(NSInteger, PagerControlState) {
     //스크롤방향은 horiozontal
     [self.flowLayout setScrollDirection:UICollectionViewScrollDirectionHorizontal];
     [self setDelegate:self];
-    self.beforeFrame = self.frame;
+    self.beforeFrame = CGRectMake(0, 0, 0, 0);
     
     self.pagerControlState = PagerControlStateStayCurrent;
     [self setDecelerationRate: UIScrollViewDecelerationRateFast];
