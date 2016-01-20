@@ -1,9 +1,9 @@
 //
 //  main.m
-//  HWViewPager
+//  HWViewPagerDemo
 //
-//  Created by HyunWoo Kim on 2015. 1. 9..
-//  Copyright (c) 2015년 HyunWoo Kim. All rights reserved.
+//  Created by HyunWoo Kim on 2016. 1. 20..
+//  Copyright © 2016년 KokohApps. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

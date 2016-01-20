@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--first-->
+        <!--User Pager Delegate-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" sceneMemberID="viewController">
@@ -14,34 +15,34 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Layout - SectionInset = 0, minLinespacing =0, SelectedPage : 0" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F94-3W-nX1">
-                                <rect key="frame" x="16" y="28" width="568" height="61"/>
+                                <rect key="frame" x="16" y="28" width="343" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="c7C-ha-Ubj" customClass="HWViewPager">
-                                <rect key="frame" x="0.0" y="97" width="600" height="414"/>
+                                <rect key="frame" x="0.0" y="97" width="375" height="481"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="0.0" id="zo1-wz-90i">
-                                    <size key="itemSize" width="244" height="248"/>
+                                    <size key="itemSize" width="356.5" height="314"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FullCollectionCell" id="pdP-v1-vBX">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="10" y="0.0" width="357" height="314"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="244" height="248"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="357" height="314"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Sky-sq-y2L">
-                                                    <rect key="frame" x="0.0" y="0.0" width="244" height="248"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Sky-sq-y2L">
+                                                    <rect key="frame" x="0.0" y="0.0" width="357" height="314"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -59,21 +60,40 @@
                                     <outlet property="userPagerDelegate" destination="9pv-A4-QxB" id="Hta-GS-al5"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8w-45-DHc">
+                                <rect key="frame" x="8" y="580" width="156" height="30"/>
+                                <state key="normal" title="Go First(No Animation)"/>
+                                <connections>
+                                    <action selector="goFirst:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Y38-ID-dVj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kad-hv-NYk">
+                                <rect key="frame" x="253" y="580" width="114" height="30"/>
+                                <state key="normal" title="3Page with anim"/>
+                                <connections>
+                                    <action selector="go3Page:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Gqw-vj-wEx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="S8w-45-DHc" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" constant="8" id="14z-oB-ZqE"/>
                             <constraint firstItem="c7C-ha-Ubj" firstAttribute="top" secondItem="F94-3W-nX1" secondAttribute="bottom" constant="8.5" id="2XL-hy-JeY"/>
+                            <constraint firstAttribute="trailing" secondItem="kad-hv-NYk" secondAttribute="trailing" constant="8" id="Kc1-Lm-B9F"/>
                             <constraint firstAttribute="trailingMargin" secondItem="F94-3W-nX1" secondAttribute="trailing" id="Oe6-4f-vWu"/>
                             <constraint firstItem="F94-3W-nX1" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="SKt-Y3-tHO"/>
                             <constraint firstItem="c7C-ha-Ubj" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-16" id="Ueb-pz-pQA"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="kad-hv-NYk" secondAttribute="bottom" constant="8" id="hZI-Ok-x4U"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c7C-ha-Ubj" secondAttribute="trailing" constant="-16" id="m8R-ze-0x0"/>
                             <constraint firstItem="F94-3W-nX1" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="oW8-JM-FgR"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="c7C-ha-Ubj" secondAttribute="bottom" constant="40" id="s8I-Ze-nXl"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="S8w-45-DHc" secondAttribute="bottom" constant="8" id="uPE-b6-lgV"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="first" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="label" destination="F94-3W-nX1" id="4GM-IM-4iC"/>
+                        <outlet property="viewPager" destination="c7C-ha-Ubj" id="1Lz-qF-11I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
@@ -89,27 +109,28 @@
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="255" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9Pk-UR-O1O">
-                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="255" id="NcI-T5-o8h" customClass="TableViewCell">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="22" width="375" height="255"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NcI-T5-o8h" id="uO8-aW-ibO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="255"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Label1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AR-Eq-1S0">
-                                                    <rect key="frame" x="8" y="8" width="52" height="20"/>
+                                                    <rect key="frame" x="8" y="8" width="50" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PLt-Ln-E9s" customClass="HWViewPager">
-                                                    <rect key="frame" x="0.0" y="35" width="600" height="200"/>
+                                                    <rect key="frame" x="0.0" y="35" width="375" height="200"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="200" id="EPB-95-IVi"/>
@@ -122,13 +143,13 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionCell2" id="YVH-st-h1v">
-                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <rect key="frame" x="25" y="9" width="91" height="182"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="91" height="182"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lZI-2T-FOX">
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="lZI-2T-FOX">
                                                                         <rect key="frame" x="0.0" y="0.0" width="91" height="182"/>
                                                                     </imageView>
                                                                 </subviews>
@@ -186,6 +207,7 @@
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -201,7 +223,7 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--Item-->
+        <!--User Pager Delegate-->
         <scene sceneID="x5T-E3-CBj">
             <objects>
                 <viewController id="Cjo-aX-Eei" customClass="ThirdViewController" sceneMemberID="viewController">
@@ -210,17 +232,17 @@
                         <viewControllerLayoutGuide type="bottom" id="pIT-nI-fON"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dgZ-tv-g7j">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SectionInset left,right = 0, minLinespacing =0" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gG6-fJ-iBy">
-                                <rect key="frame" x="16" y="28" width="568" height="21"/>
+                                <rect key="frame" x="16" y="28" width="343" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mWA-ZM-wEl" customClass="HWViewPager">
-                                <rect key="frame" x="0.0" y="56" width="600" height="475"/>
+                                <rect key="frame" x="0.0" y="77" width="375" height="521"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="P94-bu-GPc">
                                     <size key="itemSize" width="244" height="248"/>
@@ -230,13 +252,13 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FullCollectionCell" id="T4T-DY-VhO">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <rect key="frame" x="66" y="0.0" width="244" height="248"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="244" height="248"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="m0q-bW-yfr">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="m0q-bW-yfr">
                                                     <rect key="frame" x="0.0" y="0.0" width="244" height="248"/>
                                                 </imageView>
                                             </subviews>
@@ -278,8 +300,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Image" width="341" height="290"/>
         <image name="first" width="30" height="30"/>
-        <image name="image.jpg" width="1024" height="872"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>

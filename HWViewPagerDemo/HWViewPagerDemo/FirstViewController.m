@@ -11,6 +11,7 @@
 
 @interface FirstViewController () <UICollectionViewDataSource, HWViewPagerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet HWViewPager *viewPager;
 
 @end
 
@@ -43,6 +44,19 @@
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
     return 10;
 }
+
+
+- (IBAction)goFirst:(id)sender {
+    [self.viewPager setPage:0 isAnimation:NO];
+}
+
+- (IBAction)go3Page:(id)sender {
+    [self.viewPager setPage:3 isAnimation:YES];
+}
+
+
+
+
 
 
 

@@ -20,5 +20,7 @@
 
 -(void) setPagerDelegate:(id<HWViewPagerDelegate>)pagerDelegate;
 
+-(void) setPage:(NSInteger)page isAnimation:(BOOL)isAnim;
+
 @end
 

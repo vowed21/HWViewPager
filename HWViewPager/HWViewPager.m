@@ -214,6 +214,20 @@ typedef NS_ENUM(NSInteger, PagerControlState) {
 }
 
 
+-(void) setPage:(NSInteger)page isAnimation:(BOOL)isAnim{
+    
+    if(page == self.selectedPageNum || page >= self.itemsTotalNum){
+        return;
+    }
+    
+    CGFloat offset = [self getOffsetFromPage:page scrollView:self];
+    [self setContentOffset:CGPointMake(offset, 0) animated:isAnim];
+    self.selectedPageNum = page;
+    if(self.userPagerDelegate != nil){
+        [self.userPagerDelegate pagerDidSelectedPage:page];
+    }
+}
+
 
 
 
